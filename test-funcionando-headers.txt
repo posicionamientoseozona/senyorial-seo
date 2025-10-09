@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-DNS-Prefetch-Control: on
+X-Frame-Options: DENY
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+content-disposition: attachment; filename=presupuesto-test-post-build-PRE-7023.pdf
+content-type: application/pdf
+x-quote-reference: PRE-7023
+Date: Thu, 25 Sep 2025 20:21:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
