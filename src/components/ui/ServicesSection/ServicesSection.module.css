@@ -1,0 +1,348 @@
+/* Services Section Styles */
+.services {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 40px; /* antes 2.5rem */
+  font-weight: 700;
+  color: #005b8d; /* antes var(--color-primary) */
+  margin-bottom: 24px; /* antes var(--space-md) */
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Scroll Horizontal para Servicios */
+.servicesScroll {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: var(--space-xl) 0;
+  background: var(--color-white);
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  margin-bottom: var(--space-xl);
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 5%;
+}
+
+.servicesScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.servicesContainer {
+  display: flex;
+  gap: var(--space-xl);
+  padding: 0 5%;
+  min-width: fit-content;
+  align-items: stretch;
+}
+
+/* Service Card Styles */
+.serviceCard {
+  flex: 0 0 auto;
+  width: 380px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: all var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+
+.cardHeader {
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
+  text-align: center;
+  position: relative;
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+  overflow: hidden;
+  border: 3px solid var(--color-secondary);
+}
+
+/* Hover iconWrapper eliminado */
+
+.serviceIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+/* Hover serviceIcon eliminado */
+
+.ctaTitle {
+  font-size: 1.8rem; /* ya estaba así */
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+  position: relative;
+  z-index: 2;
+}
+
+.cardContent {
+  padding: 0 var(--space-lg) var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.checkIcon {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.cardFooter {
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  border-top: 1px solid #f0f0f0;
+  background: var(--color-white);
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.cardFooter .btn4 {
+  min-width: 160px;
+  font-size: 0.9rem;
+  padding: var(--space-xs) var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.serviceLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+.serviceLink:hover {
+  color: var(--color-secondary);
+}
+.arrow {
+  transition: transform var(--transition);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.serviceLink:hover .arrow,
+.btn4:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  justify-content: center;
+}
+.ctaCard {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.ctaCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grain" width="100" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="5" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="15" r="1.2" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="8" r="0.8" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="20" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+.ctaTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+  position: relative;
+  z-index: 2;
+}
+.ctaText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 2;
+}   
+.ctaButtons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.ctaButtons .btn {
+  min-width: 160px;
+}
+.ctaButtons .btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+.ctaButtons .btn-outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .services {
+    padding: var(--space-xl) 0;
+  }
+  .header {
+    margin-bottom: var(--space-xl);
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .servicesScroll {
+    padding: var(--space-lg) 0;
+  }
+
+  .serviceCard {
+    width: calc(85vw - var(--space-lg));
+    max-width: 320px;
+    scroll-snap-align: start;
+  }
+  .iconWrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .serviceIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+  .ctaCard {
+    padding: var(--space-xl);
+    margin: 0 var(--space-sm);
+  }
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ctaButtons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesScroll {
+    padding: var(--space-md) 0;
+  }
+
+  .servicesContainer {
+    gap: var(--space-lg);
+    padding: 0 var(--space-md);
+  }
+
+  .serviceCard {
+    width: calc(80vw - var(--space-md));
+    max-width: 280px;
+    scroll-snap-align: start;
+  }
+
+  .cardHeader {
+    padding: var(--space-lg) var(--space-md) var(--space-sm);
+  }
+  .cardContent {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+  .cardFooter {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+  .ctaCard {
+    padding: var(--space-lg);
+  }
+  .ctaTitle {
+    font-size: 1.3rem;
+  }
+  .ctaText {
+    font-size: 1rem;
+  }
+} 

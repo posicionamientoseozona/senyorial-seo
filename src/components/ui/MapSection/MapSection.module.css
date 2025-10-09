@@ -1,0 +1,139 @@
+.mapSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-background);
+  overflow-x: hidden;
+}
+
+.mapContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.mapInfo {
+  padding-right: var(--space-lg);
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+.serviceArea h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.2rem;
+}
+
+.serviceArea ul {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceArea li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}
+
+.serviceArea li::before {
+  content: "✓";
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-right: var(--space-sm);
+}
+
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 0;
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--color-border, #e5e7eb);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mapContent {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mapInfo {
+    padding-right: 0;
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mapContainer {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .description {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .map {
+    height: 300px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .map {
+    height: 250px;
+  }
+}
+
+.serviceLabel {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  color: #005b8d;
+  margin-bottom: 16px;
+}
