@@ -1,0 +1,18 @@
+{
+  "name": "Senyorial - Empresa de Limpieza Profesional",
+  "short_name": "Senyorial",
+  "description": "Servicios de limpieza profesional en Palma de Mallorca",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#005b8d",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "lang": "es",
+  "scope": "/"
+}
