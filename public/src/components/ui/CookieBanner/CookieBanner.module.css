@@ -1,0 +1,102 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  max-width: 600px; /* Limit width on larger screens */
+  margin: 0 auto; /* Center the banner */
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-primary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-lg, 12px); /* Use existing radius or a default */
+  box-shadow: var(--shadow-lg, 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04));
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateY(200%);
+  opacity: 0;
+  animation: slideIn 0.5s 0.5s forwards ease-out;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Adjusted gap for two buttons */
+  flex-shrink: 0;
+}
+
+.acceptButton, .declineButton {
+  border: 1px solid var(--color-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius, 8px);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.acceptButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.acceptButton:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.declineButton {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.declineButton:hover {
+  background-color: rgba(0, 91, 141, 0.05);
+  transform: translateY(-1px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cookieBanner {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

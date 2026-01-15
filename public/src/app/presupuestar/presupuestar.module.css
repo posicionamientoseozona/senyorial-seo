@@ -1,0 +1,1405 @@
+/* Presupuestar Page Styles */
+.presupuestarPage {
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--space-xl) 0 var(--space-xl) 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="1"/><path d="M0,70 Q25,60 50,70 T100,70" stroke="rgba(255,255,255,0.08)" fill="none" stroke-width="1"/><path d="M0,30 Q25,20 50,30 T100,30" stroke="rgba(255,255,255,0.06)" fill="none" stroke-width="1"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+.heroContent {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+  color: var(--text-on-primary);
+}
+
+.highlight {
+  color: var(--color-secondary);
+  text-shadow: 0 0 30px rgba(3, 180, 198, 0.5);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-on-primary);
+  opacity: 0.95;
+  margin-bottom: var(--space-lg);
+}
+
+.heroFeatures {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Services Section - Independent */
+.servicesSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: visible;
+}
+
+.servicesFormWrapper {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+}
+
+/* Quote Section */
+.quoteSection {
+  padding: var(--space-xl) 0;
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Override for services section to be full-width */
+.servicesSection .formContainer {
+  max-width: none;
+}
+
+.formWrapper {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow);
+  border: 1px solid #e9ecef;
+}
+
+/* Form Sections */
+.formSection {
+  margin-bottom: var(--space-xl);
+}
+
+.formSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+/* Form Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup.full-width {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.input,
+.select,
+.textarea {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid #e9ecef;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: all var(--transition);
+  background-color: var(--color-white);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(3, 180, 198, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Services Horizontal Scroll - Mobile First */
+.servicesGrid {
+  width: 100%;
+  padding: var(--space-md) 0;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  margin-bottom: var(--space-lg);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 200;
+}
+
+.servicesGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.servicesContainer {
+  display: flex;
+  gap: var(--space-md);
+  padding: 0 var(--space-md);
+  min-width: fit-content;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.serviceCard {
+  flex: 0 0 auto;
+  width: 224px;
+  min-height: 240px;
+  border-radius: 12px;
+  padding: 0;
+  transition: all 0.15s ease-out;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 250;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.06;
+  transition: all 0.15s ease-out;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.serviceCard[data-service="limpieza-por-horas"]::before {
+  background-image: url('/images/services/hogares/kitchen-2165756_1920.webp');
+}
+
+.serviceCard[data-service="oficinas"]::before {
+  background-image: url('/images/services/oficinas/Oficinas-hero.webp');
+}
+
+.serviceCard[data-service="comunidades"]::before {
+  background-image: url('/images/services/comunidades/Comunidades-hero.webp');
+}
+
+.serviceCard:hover::before {
+  opacity: 0.1;
+  transform: scale(1.02);
+}
+
+.serviceCard.selected {
+  border: none;
+  box-shadow:
+    0 8px 20px rgba(3, 180, 198, 0.4),
+    0 0 0 1px rgba(3, 180, 198, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  width: 256px;
+  min-height: 260px;
+  transform: translateY(-8px) scale(1.03);
+  z-index: 300;
+}
+
+.serviceCard.selected::before {
+  opacity: 0.15;
+  transform: scale(1.08);
+}
+
+.serviceCard.selected::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+    rgba(3, 180, 198, 0.05) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(3, 180, 198, 0.05) 100%);
+  z-index: 0;
+  border-radius: 16px;
+}
+
+.serviceHeader {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Imagen en el header de tarjetas seleccionadas */
+.serviceCard.selected .serviceHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 16px 16px 0 0;
+}
+
+.serviceCard.selected[data-service="limpieza-por-horas"] .serviceHeader::before {
+  background-image: url('/images/services/hogares/kitchen-2165756_1920.webp');
+}
+
+.serviceCard.selected[data-service="oficinas"] .serviceHeader::before {
+  background-image: url('/images/services/oficinas/Oficinas-hero.webp');
+}
+
+.serviceCard.selected[data-service="comunidades"] .serviceHeader::before {
+  background-image: url('/images/services/comunidades/Comunidades-hero.webp');
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  width: 100%;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(8px);
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-out;
+}
+
+.serviceCard.selected .radioLabel {
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+.serviceCard.selected .serviceName {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.serviceCard.selected .servicePrice {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-secondary);
+}
+
+.serviceName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.servicePrice {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Service Configuration */
+.serviceConfig {
+  padding: var(--space-md) var(--space-lg) var(--space-lg) var(--space-lg);
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 16px 16px;
+  border-top: 1px solid rgba(3, 180, 198, 0.15);
+  transition: all 0.15s ease-out;
+}
+
+.configGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.configGrid2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.configGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.configLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.labelWithInfo .configLabel {
+  margin-bottom: 0;
+}
+
+.configInput,
+.configSelect {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid #dee2e6;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background-color: var(--color-white);
+  transition: all var(--transition);
+  color: var(--color-primary);
+  min-height: 36px;
+  appearance: none;
+  width: 90%;
+}
+
+.configInput:focus,
+.configSelect:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.configSelect {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23005b8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-sm) center;
+  background-size: 12px;
+  padding-right: calc(var(--space-md) + 20px);
+  cursor: pointer;
+}
+
+.configSelect:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #dee2e6;
+}
+
+.configSelect:disabled:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Weekly Services Subselector */
+.weeklySubselector {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm);
+  background-color: rgba(3, 180, 198, 0.05);
+  border-radius: var(--radius);
+  border: 1px solid rgba(3, 180, 198, 0.2);
+}
+
+.subLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.subSelect {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid #dee2e6;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  background-color: var(--color-white);
+  transition: all var(--transition);
+  color: var(--color-primary);
+  min-height: 32px;
+  appearance: none;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23005b8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-xs) center;
+  background-size: 10px;
+  padding-right: calc(var(--space-sm) + 18px);
+  cursor: pointer;
+}
+
+.subSelect:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 2px rgba(3, 180, 198, 0.1);
+}
+
+/* Config Select Disabled State */
+.configSelectDisabled {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid #dee2e6;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.premiumIconLabel {
+  color: var(--color-secondary);
+  margin-left: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.labelWithInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  position: relative;
+  margin-bottom: var(--space-xs);
+}
+
+.infoButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  height: 18px;
+  width: 18px;
+}
+
+.infoButton:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.tooltip {
+  position: absolute;
+  top: -10px;
+  right: 100%;
+  margin-right: var(--space-xs);
+  z-index: 1000;
+}
+
+.tooltipContent {
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.tooltipContent p {
+  margin: 0;
+  margin-bottom: var(--space-xs);
+  color: #ffffff !important;
+}
+
+.tooltipContent p:last-child {
+  margin-bottom: 0;
+}
+
+.tooltipContent strong {
+  color: #ffffff !important;
+}
+
+.tooltipContent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent var(--color-primary);
+}
+
+/* Photo Upload Styles */
+.photoUploadArea {
+  margin-top: var(--space-sm);
+}
+
+.photoInput {
+  display: none;
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border: 2px dashed var(--color-secondary);
+  border-radius: var(--radius);
+  background-color: rgba(3, 180, 198, 0.05);
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+  width: 100%;
+}
+
+.uploadButton:hover {
+  background-color: rgba(3, 180, 198, 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.photosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.photoItem {
+  position: relative;
+  border: 1px solid #e9ecef;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.photoPreview {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.removePhotoButton {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.removePhotoButton:hover {
+  background: #dc3545;
+  transform: scale(1.1);
+}
+
+.photoName {
+  display: block;
+  padding: var(--space-xs);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f8f9fa;
+}
+
+
+.calculatedPrice {
+  text-align: right;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.price {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+}
+
+/* Floating Button */
+.floatingButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius);
+}
+
+
+.pdfButton {
+  padding: var(--space-md) var(--space-xl);
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+.pdfButton:hover:not(.disabled) {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.pdfButton.disabled {
+  background: #dee2e6;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .formContainer {
+    max-width: 800px;
+  }
+
+  .floatingButton {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-xl) 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .quoteSection {
+    padding: var(--space-xl) 0;
+  }
+
+  .formWrapper {
+    padding: var(--space-lg);
+    margin: 0 var(--space-sm);
+  }
+
+  .floatingButton {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .pdfButton {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.9rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .addressGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .configGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .configGrid2x2 {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .serviceName {
+    font-size: 1.2rem;
+  }
+
+  .serviceDescription {
+    font-size: 0.9rem;
+  }
+
+  .configInput,
+  .configSelect {
+    min-height: 36px;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .subSelect {
+    min-height: 34px;
+    font-size: 0.8rem;
+  }
+
+  .serviceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .formWrapper {
+    padding: var(--space-md);
+  }
+
+  .floatingButton {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .pdfButton {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.85rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .configGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .configGrid2x2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .radioLabel {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .serviceName {
+    font-size: 1.1rem;
+  }
+
+  .serviceDescription {
+    font-size: 0.85rem;
+  }
+
+  .serviceConfig {
+    padding: var(--space-sm) var(--space-md) var(--space-md) var(--space-md);
+  }
+
+  .configInput,
+  .configSelect {
+    min-height: 40px;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.9rem;
+  }
+
+  .configSelectDisabled {
+    min-height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .subSelect {
+    min-height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .weeklySubselector {
+    padding: var(--space-xs);
+  }
+
+  .photosGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .uploadButton {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* Validation Styles */
+.inputError {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+}
+
+.inputValid {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1) !important;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: var(--space-xs);
+  font-weight: 500;
+}
+
+/* Label color changes based on validation */
+.formGroup:has(.inputError) .label {
+  color: #dc3545;
+}
+
+.formGroup:has(.inputValid) .label {
+  color: #28a745;
+}
+
+/* Responsive adjustments for service cards - Mobile First */
+
+/* Tablet adjustments */
+@media (min-width: 768px) {
+  .servicesGrid {
+    padding: var(--space-lg) 0;
+  }
+
+  .servicesContainer {
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
+    justify-content: center;
+  }
+
+  .serviceCard {
+    width: 272px;
+    min-height: 260px;
+    border-radius: 14px;
+  }
+
+  .serviceCard.selected {
+    width: 304px;
+    min-height: 280px;
+    transform: translateY(-8px) scale(1.04);
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+  .servicesGrid {
+    padding: var(--space-xl) 0;
+  }
+
+  .servicesContainer {
+    gap: var(--space-xl);
+    padding: 0 var(--space-xl);
+  }
+
+  .serviceCard {
+    width: 400px;
+    min-height: 280px;
+    border-radius: 16px;
+  }
+
+  .serviceCard.selected {
+    width: 450px;
+    min-height: 320px;
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+/* Large desktop adjustments */
+@media (min-width: 1440px) {
+  .servicesContainer {
+    gap: calc(var(--space-xl) * 1.5);
+  }
+
+  .serviceCard {
+    width: 420px;
+    min-height: 300px;
+  }
+
+  .serviceCard.selected {
+    width: 470px;
+    min-height: 340px;
+  }
+}
+
+/* =============================================================================
+   SECCIÓN DE CONVERSIÓN - PRESUPUESTO Y CONTRATO
+   ============================================================================= */
+
+.conversionSubtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  opacity: 0.9;
+}
+
+.conversionOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.conversionCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 2px solid #e9ecef;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.conversionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e9ecef;
+  transition: all var(--transition);
+}
+
+.conversionCard.included::before {
+  background: var(--color-secondary);
+}
+
+.conversionCard.selected {
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 20px rgba(3, 180, 198, 0.15);
+  transform: translateY(-2px);
+}
+
+.conversionCard.selected::before {
+  background: var(--color-secondary);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.cardIcon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.conversionCard.included .cardIcon {
+  color: var(--color-secondary);
+}
+
+.conversionCard.selected .cardIcon {
+  color: var(--color-secondary);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.cardStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Badge para "Siempre incluido" */
+.includedBadge {
+  background: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
+  color: var(--color-white);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(3, 180, 198, 0.3);
+}
+
+/* Toggle Switch para el contrato */
+.contractToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.contractCheckbox {
+  display: none;
+}
+
+.toggleSlider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: #dee2e6;
+  border-radius: 12px;
+  transition: background var(--transition);
+  flex-shrink: 0;
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-white);
+  border-radius: 50%;
+  transition: transform var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contractCheckbox:checked + .toggleSlider {
+  background: var(--color-secondary);
+}
+
+.contractCheckbox:checked + .toggleSlider::before {
+  transform: translateX(26px);
+}
+
+.toggleLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: color var(--transition);
+}
+
+.contractCheckbox:checked ~ .toggleLabel {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* Efectos hover */
+.conversionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.conversionCard.included:hover {
+  box-shadow: 0 6px 25px rgba(3, 180, 198, 0.2);
+}
+
+.contractToggle:hover .toggleSlider {
+  background: var(--color-primary);
+}
+
+.contractToggle:hover .contractCheckbox:checked + .toggleSlider {
+  background: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conversionOptions {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .conversionCard {
+    padding: var(--space-lg);
+  }
+
+  .cardHeader {
+    gap: var(--space-sm);
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+
+  .conversionSubtitle {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .conversionCard {
+    padding: var(--space-md);
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .contractToggle {
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+
+  .toggleLabel {
+    font-size: 0.85rem;
+  }
+}
+
+/* =============================================================================
+   SECCIÓN DE DATOS DE FACTURACIÓN (DINÁMICA)
+   ============================================================================= */
+
+.billingSection {
+  animation: slideDown 0.3s ease-out;
+  background: var(--color-white);
+  border: 1px solid rgba(3, 180, 198, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-top: var(--space-lg);
+  position: relative;
+}
+
+.billingSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.billingSectionSubtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.billingNote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: rgba(3, 180, 198, 0.05);
+  border: 1px solid rgba(3, 180, 198, 0.2);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.billingIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.billingNoteText {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Address Grid - Dos inputs en un solo campo con distribución 60/40 */
+.addressGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.addressGrid input:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.addressGrid input:last-child {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* Animación de aparición */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+/* Responsive para sección de facturación */
+@media (max-width: 768px) {
+  .billingSection {
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+  }
+
+  .billingSectionSubtitle {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .billingNote {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
+  }
+
+  .billingIcon {
+    margin: 0 auto;
+  }
+
+  .billingNoteText {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .billingSection {
+    padding: var(--space-md);
+  }
+
+  .billingSectionSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .billingNote {
+    padding: var(--space-sm);
+  }
+
+  .billingNoteText {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,448 @@
+/* Contacto Page Styles */
+.contactPage {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="1"/><path d="M0,70 Q25,60 50,70 T100,70" stroke="rgba(255,255,255,0.08)" fill="none" stroke-width="1"/><path d="M0,30 Q25,20 50,30 T100,30" stroke="rgba(255,255,255,0.06)" fill="none" stroke-width="1"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+.heroContent {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+  color: var(--text-on-primary);
+}
+
+.highlight {
+  color: var(--color-secondary);
+  text-shadow: 0 0 30px rgba(3, 180, 198, 0.5);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Main Content */
+.mainContent {
+  padding: var(--space-xl) 0;
+  background: var(--color-white);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.formWrapper {
+  margin-bottom: var(--space-lg);
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.formDescription {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+/* Info Section */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.infoCard {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  border: 1px solid #e9ecef;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.contactContent {
+  flex: 1;
+}
+
+.contactLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contactValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.contactValue:hover {
+  color: var(--color-secondary);
+}
+
+.contactNote {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* WhatsApp Card */
+.whatsappCard {
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  color: var(--color-white);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.whatsappContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.whatsappIcon {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.whatsappTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.whatsappText {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+.whatsappButton {
+  background: var(--color-white);
+  color: #25d366;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  transition: all var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.whatsappButton:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.whatsappButtonIcon {
+  font-size: 1.1rem;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  background: #f8f9fa;
+  padding: var(--space-xl) 0;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.benefit {
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid #e9ecef;
+  transition: all var(--transition);
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.benefitIcon {
+  font-size: 3rem;
+  margin: 0 auto var(--space-md);
+  display: block;
+}
+
+.benefitTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.benefitText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Floating Button */
+.floatingButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius);
+}
+
+.floatingButton button {
+  min-width: 200px;
+}
+
+.contactoButton {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-lg);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-width: 200px;
+  box-shadow: var(--shadow);
+}
+
+.contactoButton:hover:not(.disabled) {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.contactoButton.disabled {
+  background: #dee2e6;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.loadingSpinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contentGrid {
+    gap: var(--space-xl);
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-xl) 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .mainContent {
+    padding: var(--space-xl) 0;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .formTitle {
+    font-size: 1.8rem;
+  }
+
+  .infoCard,
+  .whatsappCard {
+    padding: var(--space-lg);
+  }
+
+  .contactItem {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+
+  .iconWrapper {
+    margin: 0 auto;
+  }
+
+  .benefitsSection {
+    padding: var(--space-xl) 0;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .benefit {
+    padding: var(--space-lg);
+  }
+
+  .floatingButton {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .floatingButton button {
+    min-width: 180px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .formTitle {
+    font-size: 1.6rem;
+  }
+
+  .infoCard,
+  .whatsappCard {
+    padding: var(--space-md);
+  }
+
+  .benefit {
+    padding: var(--space-md);
+  }
+
+  .floatingButton {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .floatingButton button {
+    min-width: 160px;
+    font-size: 0.85rem;
+    padding: var(--space-sm) var(--space-md);
+  }
+}
