@@ -1,8 +1,0 @@
-# robots.txt para senyorial.es
-# Permite el acceso a todos los buscadores
-
-User-agent: *
-Disallow:
-
-# Sitemap de la web
-Sitemap: https://senyorial.es/sitemap.xml
