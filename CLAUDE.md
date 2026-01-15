@@ -1,6 +1,0 @@
--Durante la conversación, debes hablar en español
--Mantendrás el codigo modular, organizandolo en carpetas para que cada pagina tenga su carpeta
--Evitaras archivos largos de mas de 1000 lineas de código, en ese caso debemos separar la logica en archivos independientes
--Para los estilos, utilizaremos modulos css y reutilizaremos en la medida de lo posible los estilos de globals evitando en todo momento recrear nuevos estilos a no ser que se pida explicitamente
--Utilizaremos SSG por defecto y mejores practicas SEO en todo momento
--Prohibido usar emojis, en cualquier caso utilizaremos iconos de lucide react
